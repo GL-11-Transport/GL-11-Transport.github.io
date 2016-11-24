@@ -1073,4 +1073,8 @@ textarea:focus {
         width: 42%;
         margin: 0 4%;
     }
+
+    .location{
+        height: 100%;
+    }
 }

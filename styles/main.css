@@ -19,8 +19,6 @@ body {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    max-width: 100vw;
-    min-width: 100vw;
     overflow-x: hidden;
 }
 
@@ -628,9 +626,61 @@ textarea:focus {
 
 }
 
+/*--- Animate numbers ---*/
+
+.animated {
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes pulse {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes pulse {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.pulse {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+}
+
+/*--- end ---*/
+
 .our_core_line_divs {
 
-    padding-top: 8%;
+    padding: 8% 0 4% 0;
     display: inline-block;
     width: 350px;
     text-align: center;
@@ -642,11 +692,12 @@ textarea:focus {
 
 }
 
-.our_core_line_divs span {
+.our_core_line_divs div {
 
     font-size: 4em;
     color: #1a5eb2;
     font-weight: 700;
+    display: inline-block;
 }
 
 .our_core_line_divs h3 {
@@ -665,8 +716,7 @@ textarea:focus {
 
 .we_grow {
     background-color: rgba(101, 101, 101, 0.8);
-    min-height: 50vh;
-    max-height: 50vh;
+    min-height: 55vh;
     color: rgb(255, 255, 255);
 }
 
@@ -750,8 +800,7 @@ textarea:focus {
 .location {
     z-index: -1;
     width: 100%;
-    max-height: 50vh;
-    min-height: 50vh;
+    min-height: 50%;
     position: absolute;
 }
 
@@ -817,7 +866,7 @@ textarea:focus {
 
 /*--- Media Rule ---*/
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 968px) {
     body {
         font-size: 24px;
     }
@@ -832,6 +881,7 @@ textarea:focus {
         font-size: 0.7em;
         margin-top: 15%;
         margin-left: 11%;
+        line-height: normal;
     }
 
     .primary_page_form_div {
@@ -990,10 +1040,37 @@ textarea:focus {
     .we_grow_right {
         float: none;
         width: 100%;
-
+        padding-bottom: 5%;
     }
 
     .footer_info {
         width: 40%
+    }
+}
+
+@media all and (max-height: 500px) {
+
+    .slide_pages_main {
+        font-size: 0.5em;
+        float: left;
+        width: 28%;
+        margin-top: 0;
+    }
+
+    .primary_page_form_div {
+        margin-top: 0;
+        float: right;
+        width: 42%;
+        margin-left: 0;
+    }
+
+    .primary_page_form_div p:first-of-type {
+        font-size: 0.5em;
+    }
+
+    .third_page_form {
+        float: right;
+        width: 45%;
+        margin-top: 7%;
     }
 }

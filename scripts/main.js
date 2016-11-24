@@ -10,9 +10,9 @@ $(document).ready(function () {
 /*--- this remove all function from slick function ---*/
 
 
-$("#a").click(function (event) {
-    event.stopPropagation();
-});
+// $("#a").click(function (event) {
+//     event.stopPropagation();
+// });
 
 /* first page select */
 var paleteSize = 0;
@@ -160,29 +160,29 @@ document.getElementById("firstRange").onchange = function takeRangeValue() {
 };
 
 /*--- This make numbers to roll ---*/
-
-document.addEventListener('scroll', function () {
-    if (document.body.scrollHeight <= document.body.scrollTop + window.innerHeight ) {
-        rolls(document.querySelector('#packages1'));
-        rolls(document.querySelector('#packages3'));
-        rolls(document.querySelector('#packages4'));
-        rolls(document.querySelector('#packages5'));
-    }
-});
-
-function rolls() {
-    var toNumber = 0 ;
-    setTimeout(function () {
-        var changeValue = document.getElementById('packages1');
-
-        changeValue.innerHTML = parseInt(changeValue.innerHTML) + 1;
-
-        if (parseInt(changeValue.innerHTML) !== toNumber) {
-           document.getElementById('packages1'), toNumber;
-        }
-    }, 300);
-
-};
+//
+// document.addEventListener('scroll', function () {
+//     if (document.body.scrollHeight <= document.body.scrollTop + window.innerHeight + 150 ) {
+//         rolls(document.querySelector('#packages1'));
+//         rolls(document.querySelector('#packages3'));
+//         rolls(document.querySelector('#packages4'));
+//         rolls(document.querySelector('#packages5'));
+//     }
+// });
+//
+// function rolls() {
+//     var toNumber = 0 ;
+//     setTimeout(function () {
+//         var changeValue = document.getElementById('packages1');
+//
+//         changeValue.innerHTML = parseInt(changeValue.innerHTML) + 1;
+//
+//         if (parseInt(changeValue.innerHTML) !== toNumber) {
+//            document.getElementById('packages1'), toNumber;
+//         }
+//     }, 300);
+//
+// };
 
 
 

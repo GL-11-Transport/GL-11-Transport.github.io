@@ -879,7 +879,7 @@ textarea:focus {
         width: 86%;
         float: none;
         font-size: 0.5em;
-        margin-top: 15%;
+        margin-top: 2%;
         margin-left: 11%;
         line-height: normal;
     }
@@ -888,7 +888,7 @@ textarea:focus {
         width: 82%;
         float: none;
         margin-left: 8%;
-        margin-top: 15%;
+        margin-top:2%;
     }
 
     .our_core_line_divs {
@@ -1048,7 +1048,7 @@ textarea:focus {
     }
 }
 
-@media all and (max-height: 500px) {
+@media all and (max-height: 460px) {
 
     .slide_pages_main {
         font-size: 0.5em;
@@ -1070,7 +1070,7 @@ textarea:focus {
 
     .third_page_form {
         float: right;
-        width: 45%;
-        margin-top: 7%;
+        width: 42%;
+        margin: 0 4%;
     }
 }
